@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add a comment</title>
+
+    <style>
+        h1 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input[type='number'],
+        input[type='text'],
+        textarea {
+            font-size: 16px;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid lightgray;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 500px;
+        }
+        button {
+            color: white;
+            background-color: cornflowerblue;
+            padding: 12px 15px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: darkslateblue;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Add a new comment</h1>
+    <form action="/comments" method="post">
+        <label for="author">Author:</label>
+        <input type="text" name="author" id="author">
+
+        <label for="text">Text:</label>
+        <textarea name="text" id="text" cols="30" rows="10"></textarea>
+
+        <button type="submit">Submit comment</button>
+    </form>
+</body>
+</html>
